@@ -10,6 +10,7 @@ class Owner
   def initialize(species)
     @species = species
     @@all << self
+    @pets = {:cats => [], :dogs => [], :fishes => []}
   end
 
   def self.all
@@ -30,7 +31,7 @@ class Owner
   end
 
   def pets
-    @pets = {:cats => [], :dogs => [], :fishes => []}
+    @pets
   end
 
   def buy_fish(name)
