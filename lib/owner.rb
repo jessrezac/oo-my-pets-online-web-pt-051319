@@ -7,6 +7,7 @@ class Owner
   def initialize(species)
     @species = species
     @@all << self
+    @pets = {fish => 0, dogs => 0, cats => 0}
   end
 
   def say_species
@@ -22,6 +23,7 @@ class Owner
   end
 
   def self.reset_all
+    # why can't I use self.all here?
     @@all = []
   end
 end
