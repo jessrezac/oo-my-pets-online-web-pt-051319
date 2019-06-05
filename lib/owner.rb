@@ -8,6 +8,10 @@ class Owner
     @species = species
   end
 
+  def say_species
+    @species
+  end
+
   def self.all
     @@all
   end
