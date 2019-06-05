@@ -1,5 +1,6 @@
 class Owner
   # code goes here
+  attr_accessor :pets
   attr_reader :species
 
   @@all = []
@@ -11,6 +12,13 @@ class Owner
 
   def say_species
     "I am a #{@species}."
+  end
+
+  def pets
+    @pets = {}
+    @pets[fish] = 0
+    @pets[dogs] = 0
+    @pets[cats] = 0
   end
 
   def self.all
