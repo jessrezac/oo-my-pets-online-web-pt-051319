@@ -10,14 +10,6 @@ class Owner
     @@all << self
   end
 
-  def say_species
-    "I am a #{@species}."
-  end
-
-  def pets
-    @pets = {:cats => [], :dogs => [], :fishes => []}
-  end
-
   def self.all
     @@all
   end
@@ -29,5 +21,17 @@ class Owner
   def self.reset_all
     # why can't I use self.all here?
     @@all = []
+  end
+
+  def say_species
+    "I am a #{@species}."
+  end
+
+  def pets
+    @pets = {:cats => [], :dogs => [], :fishes => []}
+  end
+
+  def buy_fish
+    Fish.new
   end
 end
