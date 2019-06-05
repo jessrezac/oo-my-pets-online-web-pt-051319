@@ -39,7 +39,7 @@ class Owner
     Fish.new(name).tap {|f| self.pets[:fishes] << f}
   end
 
-  def buy_fish(name)
-    Fish.new(name).tap {|f| self.pets[:fishes] << f}
+  def buy_cat(name)
+    Cat.new(name).tap {|c| self.pets[:cats] << c}
   end
 end
