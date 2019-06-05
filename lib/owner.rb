@@ -16,9 +16,6 @@ class Owner
 
   def pets
     @pets = {}
-    @pets[fish] = 0
-    @pets[dogs] = 0
-    @pets[cats] = 0
   end
 
   def self.all
