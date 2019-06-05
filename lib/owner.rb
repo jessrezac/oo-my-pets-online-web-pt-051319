@@ -47,25 +47,25 @@ class Owner
   end
 
   def buy_fish(name)
-    Fish.new(name).tap {|f| self.fishes << f}
+    Fish.new(name).tap {|f| fishes << f}
   end
 
   def buy_cat(name)
-    Cat.new(name).tap {|c| self.cats << c}
+    Cat.new(name).tap {|c| cats << c}
   end
 
   def buy_dog(name)
-    Dog.new(name).tap {|d| self.dogs << d}
+    Dog.new(name).tap {|d| dogs << d}
   end
 
   def walk_dogs
-    self.dogs.each do |dog|
+    dogs.each do |dog|
       dog.mood = "happy"
     end
   end
 
   def play_with_cats
-    self.cats.each do |cat|
+    cats.each do |cat|
       cat.mood = "happy"
     end
   end
