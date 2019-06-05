@@ -4,10 +4,11 @@ class Owner
   @@all = []
 
   def self.all
-    @@all << self
+    @@all
   end
 
   def self.count
+    self.all.count
   end
 
   def self.reset_all
