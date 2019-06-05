@@ -34,12 +34,16 @@ class Owner
     @pets
   end
 
+  def cats
+    self.pets[:cats]
+  end
+
   def buy_fish(name)
     Fish.new(name).tap {|f| self.pets[:fishes] << f}
   end
 
   def buy_cat(name)
-    Cat.new(name).tap {|c| self.pets[:cats] << c}
+    Cat.new(name).tap {|c| self.cats << c}
   end
 
   def buy_dog(name)
@@ -74,5 +78,6 @@ class Owner
   end
 
   def list_pets
+    "I have #{}"
   end
 end
