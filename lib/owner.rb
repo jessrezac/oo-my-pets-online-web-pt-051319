@@ -35,7 +35,6 @@ class Owner
   end
 
   def buy_fish(name)
-    binding.pry
     fishes = self.pets[:fishes]
     Fish.new(name).tap {|f| fishes << f}
   end
