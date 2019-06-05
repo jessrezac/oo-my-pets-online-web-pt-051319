@@ -34,12 +34,20 @@ class Owner
     @pets
   end
 
+  def fishes
+    self.pets[:fishes]
+  end
+
   def cats
     self.pets[:cats]
   end
 
+  def dogs
+    self.pets[:dogs]
+  end
+
   def buy_fish(name)
-    Fish.new(name).tap {|f| self.pets[:fishes] << f}
+    Fish.new(name).tap {|f| self.fishes << f}
   end
 
   def buy_cat(name)
@@ -47,23 +55,23 @@ class Owner
   end
 
   def buy_dog(name)
-    Dog.new(name).tap {|d| self.pets[:dogs] << d}
+    Dog.new(name).tap {|d| self.dogs << d}
   end
 
   def walk_dogs
-    self.pets[:dogs].each do |dog|
+    self.dogs.each do |dog|
       dog.mood = "happy"
     end
   end
 
   def play_with_cats
-    self.pets[:cats].each do |cat|
+    self.cats.each do |cat|
       cat.mood = "happy"
     end
   end
 
   def feed_fish
-    self.pets[:fishes].each do |fish|
+    self.fishes.each do |fish|
       fish.mood = "happy"
     end
   end
